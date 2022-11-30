@@ -1,6 +1,6 @@
 import Image from "next/image";
 import styles from "../../styles/Pokemon.module.css";
-import { useRouter } from "next/router";
+import {useRouter} from "next/router";
 
 export const getStaticPaths = async () => {
 	const maxPokemons = 251;
@@ -12,7 +12,7 @@ export const getStaticPaths = async () => {
 	//params
 	const paths = data.results.map((pokemon, index) => {
 		return {
-			params: { pokemonId: (index + 1).toString() },
+			params: {pokemonId: (index + 1).toString()},
 		};
 	});
 
@@ -27,11 +27,11 @@ export const getStaticProps = async (context) => {
 	const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`);
 	const data = await res.json();
 	return {
-		props: { pokemon: data },
+		props: {pokemon: data},
 	};
 };
 
-export default function Pokemon({ pokemon }) {
+export default function Pokemon({pokemon}) {
 	const router = useRouter();
 
 	if (router.isFallback) {
