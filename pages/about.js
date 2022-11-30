@@ -5,10 +5,10 @@ export default function About(){
       return (
             <div className={styles.about}>
                   <h1>Sobre o projeto</h1>
-                  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus, 
-                        facere nisi architecto adipisci, tempora fugiat corporis aliquid dolores odit 
-                        exercitationem dolorum quas tempore, necessitatibus minima odio 
-                        cumque. Harum, quam fugit.</p>
+                  <p>Projeto criado com NextJs do curso do Professor Matheus Battisti. 
+                        Utilizamos 2 Apis, 1 para pegar os dados dos pokemons, e a outra 
+                        para capturar as imagens.
+                  </p>
                   <Image  src='/images/charizard.png' width='300' height='300' alt="Charizard"/>
             </div>
       )
